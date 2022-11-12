@@ -27,10 +27,6 @@ select * from major;
 /* 수강 테이블에 데이터 삽입 */
 insert into course(id, num, code) values (1, 202014105, 1), (2, 202014105, 2), (3, 202014105, 3), (4, 202014129, 1), (5, 202014129, 2), (6, 202014129, 3), (7, 202014132, 1), (8, 202014132, 2), (9, 202014148, 1);
 
-/* 수강 테이블과 학생 테이블 JOIN */
-select * from course c join student s on c.num = s.num;
-select * from student;
-
-/* 수강 테이블과 과목 테이블 JOIN */
-select * from course c join major m on c.code = m.code;
-select * from major;
+/* 수강 테이블에 학생, 과목 테이블 함께 JOIN */
+select * from course c join student s on c.num = s.num join major m on c.code = m.code;
+select * from course;
