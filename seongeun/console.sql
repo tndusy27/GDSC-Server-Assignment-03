@@ -26,4 +26,5 @@ INSERT INTO 수강(enroll_date, student_id, class_id) VALUES
                                           ('2022-02-17', 2020003, 003);
 select * from 수강 join 학생 on 수강.student_id = 학생.id;
 select * from 수강 join 과목 on 수강.class_id = 과목.cid;
+select * from 수강 join 학생 on 수강.student_id = 학생.id join 과목 on 수강.class_id = 과목.cid;
 SHOW COLUMNS FROM 수강;
